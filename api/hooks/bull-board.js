@@ -14,6 +14,16 @@ const updateBullDashboard = async (redisServer, serverAdapter) => {
   createBullBoard({
     queues: bullQueues,
     serverAdapter,
+    options: {
+      uiConfig: {
+        boardTitle: 'Jobs Center',
+        boardLogo: {
+          path: 'https://www.reshot.com/preview-assets/icons/8GJ7ED4K6U/bull-8GJ7ED4K6U.svg',
+          width: 30,
+          height: 30,
+        }
+      }
+    }
   });
   findQueues.forEach(async (queue) => {
     const queueCode = _.get(queue, 'code', '');
@@ -49,6 +59,16 @@ module.exports = function defineBullBoardHook(sails) {
       createBullBoard({
         queues,
         serverAdapter,
+        options: {
+          uiConfig: {
+            boardTitle: 'Jobs Center',
+            boardLogo: {
+              path: 'https://www.reshot.com/preview-assets/icons/8GJ7ED4K6U/bull-8GJ7ED4K6U.svg',
+              width: 30,
+              height: 30,
+            }
+          }
+        }
       });
       expressApp.use('/', serverAdapter.getRouter());
       sails.on('lifted', async () => {

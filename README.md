@@ -1,6 +1,12 @@
 # Job Automation Service
 
-<img src="https://www.reshot.com/preview-assets/icons/8GJ7ED4K6U/bull-8GJ7ED4K6U.svg" alt="{project_name} Logo" width="50"> Lightweight scheduling microservice for background job automation
+<div align="center">
+  <img src="https://www.reshot.com/preview-assets/icons/8GJ7ED4K6U/bull-8GJ7ED4K6U.svg" alt="{project_name} Logo" width="50" height="50">
+
+  <p>
+    <strong>Lightweight scheduling microservice for background job automation</strong>
+  </p>
+</div>
 
 ## 🌟 Overview
 
@@ -22,7 +28,7 @@ The goal is to provide flexibility and dynamic configuration so that developers 
 
 - 🔍 **Comprehensive Logging** - Detailed execution logs and error tracking
 
-- 🗄️ **Dual Storage** - PostgreSQL for job application and Redis for queue performance
+- 🗄️ \*_Dual Storage_ - PostgreSQL for job application and Redis for queue performance
 
 ## 🎯 Quick Start
 
@@ -62,6 +68,32 @@ The goal is to provide flexibility and dynamic configuration so that developers 
 ## 🏗️ Project Structure
 
 ```
+jobs-center-api/
+├── api/
+│   ├── controllers/         # Route controllers
+│   │   ├── job/             # Job management endpoints
+│   │   ├── queue/           # Queue management endpoints
+│   │   └── log/             # Log management endpoints
+│   ├── helpers/             # Job action implementations
+│   │   ├── email/           # Email-related jobs
+│   │   ├── notification/    # Notification jobs
+│   │   ├── bull/            # BullMQ integration helpers
+│   │   ├── redis/           # Redis client management
+│   │   └── util/            # Utility functions
+│   ├── models/              # Database models (Job, Queue, Log, Supplier)
+│   ├── hooks/               # Sails.js hooks
+│   │   ├── bull-board.js    # Bull Board UI integration
+│   │   └── axios/           # HTTP client configuration
+│   └── policies/            # Authorization policies
+├── config/                  # Application configuration
+│   ├── queue.js             # BullMQ queue configuration
+│   ├── datastores.js        # Database connections
+│   ├── routes.js            # API route definitions
+│   └── env/                 # Environment-specific configs
+├── test/                    # Test suites
+│   ├── integrations/        # Integration tests
+│   └── lifecycle.test.js    # Application lifecycle tests
+└── views/                   # Frontend templates (if needed)
 
 ```
 
