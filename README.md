@@ -14,6 +14,14 @@ This is a small service (microservice style) designed for **automation and sched
 It allows other services to define, schedule, and organize actions automatically.
 The goal is to provide flexibility and dynamic configuration so that developers and DevOps teams can easily manage background jobs, trace logs, and monitor execution.
 
+## 🛠️ Built With
+
+*   **Backend Framework:** [Sails.js](https://sailsjs.com/) (Node.js)
+*   **Queue Engine:** [BullMQ](https://docs.bullmq.io/) (Redis)
+*   **Primary Database:** PostgreSQL
+*   **Dashboard:** [Bull-Board](https://github.com/felixmosh/bull-board)
+*   **Language:** JavaScript
+
 ## ✨ Features
 
 - ⭐ **Queue Management** - Create and manage multiple job queues with priority settings
