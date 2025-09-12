@@ -28,7 +28,7 @@ The goal is to provide flexibility and dynamic configuration so that developers 
 
 - 🔍 **Comprehensive Logging** - Detailed execution logs and error tracking
 
-- 🗄️ \*_Dual Storage_ - PostgreSQL for job application and Redis for queue performance
+- 🗄️ **Dual Storage** - PostgreSQL for job application and Redis for queue performance
 
 ## 🎯 Quick Start
 
