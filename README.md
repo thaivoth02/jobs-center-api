@@ -103,7 +103,7 @@ jobs-center-api/
 
 <a href="https://github.com/balderdashy/sails?tab=readme-ov-file">Sails.js</a> framework
 
-<a href="https://github.com/felixmosh/bull-board">Bull Board</a for monitoring UI
+<a href="https://github.com/felixmosh/bull-board">Bull Board</a> for monitoring UI
 
 ---
 
