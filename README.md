@@ -4,33 +4,33 @@
   <img src="https://www.reshot.com/preview-assets/icons/8GJ7ED4K6U/bull-8GJ7ED4K6U.svg" alt="{project_name} Logo" width="50" height="50">
 
   <p>
-    <strong>Lightweight scheduling microservice for background job automation</strong>
+    <strong>Lightweight RESTful service for background job automation</strong>
   </p>
 </div>
 
 ## 🌟 Overview
 
-This is a small service (microservice style) designed for **automation and scheduling**.
-It allows other services to define, schedule, and organize actions automatically.
-The goal is to provide flexibility and dynamic configuration so that developers and DevOps teams can easily manage background jobs, trace logs, and monitor execution.
+This is a small service, built in a microservice style, for **automation and scheduling**.  
+It provides RESTful APIs to define, schedule, and organize background jobs.  
+The goal is to keep things flexible and configurable so developers can manage jobs, trace logs, and monitor execution with ease.
 
 ## 🛠️ Built With
 
 *   **Backend Framework:** [Sails.js](https://sailsjs.com/) (Node.js)
-*   **Queue Engine:** [BullMQ](https://docs.bullmq.io/) (Redis)
+*   **Queue Engine:** [Bull](https://optimalbits.github.io/bull/) (Redis)
 *   **Primary Database:** PostgreSQL
 *   **Dashboard:** [Bull-Board](https://github.com/felixmosh/bull-board)
 *   **Language:** JavaScript
 
 ## ✨ Features
 
-- ⭐ **Queue Management** - Create and manage multiple job queues with priority settings
+- ⭐ **Queue Management** - External queue and job management via RESTful APIs
 
-- ⏰ **Flexible Scheduling** - Schedule jobs with cron syntax, delays, or immediate execution
+- ⏰ **Flexible Scheduling** - Adaptive job scheduling with human-friendly JSON converted to cron syntax or immediate execution
 
-- 💎 **Modular Helpers** - Extensible helper system for various job types (email, crawling, reports, etc.)
+- 💎 **Modular Helpers** - Extensible helper system for various job types
 
-- 🔧 **Dynamic Job Mapping** - Automatic routing to appropriate helper scripts based on job code
+- 🔧 **Dynamic Job Mapping** - Automatic job routing to appropriate helper scripts based on job code
 
 - 📊 **Built-in Dashboard** - Bull Board UI for real-time queue monitoring and management
 
@@ -83,12 +83,13 @@ jobs-center-api/
 │   │   ├── queue/           # Queue management endpoints
 │   │   └── log/             # Log management endpoints
 │   ├── helpers/             # Job action implementations
-│   │   ├── email/           # Email-related jobs
-│   │   ├── notification/    # Notification jobs
-│   │   ├── bull/            # BullMQ integration helpers
+│   │   ├── bull/            # Bull integration helpers
+│   │   ├── job/             # Job management helpers
+│   │   ├── queue/           # Queue management helpers
+│   │   └── log/             # Log management helpers
 │   │   ├── redis/           # Redis client management
 │   │   └── util/            # Utility functions
-│   ├── models/              # Database models (Job, Queue, Log, Supplier)
+│   ├── models/              # Database models
 │   ├── hooks/               # Sails.js hooks
 │   │   ├── bull-board.js    # Bull Board UI integration
 │   │   └── axios/           # HTTP client configuration
